@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+import fetch from "node-fetch";
 
 async function getUsers() {
   let response = await fetch("https://api.github.com/users");
@@ -7,7 +7,7 @@ async function getUsers() {
 }
 
 getUsers().then((user) => {
-user.forEach(user => {
-  console.log(user);
-});
+  user.forEach((user) => {
+    console.log(user);
+  });
 });
